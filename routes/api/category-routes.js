@@ -37,7 +37,7 @@ router.get('/:id', async(req, res) => {
     if (categoryId) {
       res.json(categoryId);
     } else {
-      res.status(404).json({ error: 'No category with this ID'});
+      res.status(404).json({ error: 'Invalid category ID'});
     }
   } catch (error){
     res.status(501).json(error);
@@ -67,7 +67,7 @@ router.put('/:id', async(req, res) => {
     if (updateCategory) {
       res.json(updateCategory);
     } else {
-      res.status(404).json({ error: 'No category with this ID'});
+      res.status(404).json({ error: 'Invalid category ID'});
     }
   } catch (error) {
     res.status(503).json(error);
@@ -85,7 +85,7 @@ router.delete('/:id', async(req, res) => {
     if (deleteACategory) {
       res.json(deleteACategory);
     } else {
-      res.status(404).json({ error: 'No category with this ID'});
+      res.status(404).json({ error: 'Invalid category ID'});
     }
   } catch (error) {
     res.status(503).json(error);
